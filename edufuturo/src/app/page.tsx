@@ -7,7 +7,7 @@ export default function Home() {
     <div>
       <Header />
       {/* O conteúdo da página vai aqui */
-      <h1>Cadastrar endereço</h1>}
+      <h1>Bem vindo ao nosso aplicativo!</h1>}
       
       <Footer />
     </div>
