@@ -1,5 +1,5 @@
 // pages/RegisterClass.tsx
-
+"use client";
 import React from 'react';
 import ClassRegistrationForm, { ClassForm } from '../components/ClassRegistrationForm';
 
