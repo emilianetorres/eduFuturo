@@ -44,6 +44,29 @@ export default function SchoolRegistrationForm({ onSubmit }: Props) {
   }
 
   return (
-    // ... rest of the component ...
-  );
+      <form onSubmit={handleSubmit}>
+        <label>
+        Código INEP:
+        <input type="text" value={inep} onChange={(e) => setInep(e.target.value)} />
+        </label>
+        <br />
+        <label>
+        Gestor Escolar:
+        <input type="text" value={manager} onChange={(e) => setManager(e.target.value)} />
+        </label>
+        <br />
+        <label>
+        Secretário Escolar:
+        <input type="text" value={schoolSecretary} onChange={(e) => setSchoolSecretary(e.target.value)} />
+        </label>
+        <br />
+        <label>
+        Técnico Administrativo:
+        <input type="text" value={administrativeTechnicians.join(',')} onChange={(e) => setAdministrativeTechnicians(e.target.value.split(','))} />
+        </label>
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+      );
+  
 }

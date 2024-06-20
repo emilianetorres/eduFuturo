@@ -1,5 +1,6 @@
  "use client";
 import React, { useState, useEffect } from "react";
+import { fetchAddress } from "../../utils/fetchAddress";
 
 interface Address {
   street: string;
@@ -70,8 +71,7 @@ export default function AddressForm({ states }: Props) {
 
   useEffect(() => {
     if (address.zip.length === 8) {
-      fetch(ZIP_API_URL(address.zip))
-        .then((response) => response.json())
+      fetchAddress(address.zip)
         .then((data) => {
           setAddress((prevAddress) => ({
             ...prevAddress,

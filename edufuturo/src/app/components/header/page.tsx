@@ -1,24 +1,32 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+"use client";
+import React from "react";
+import Link from "next/link";
 
-const Header: React.FC = () => {
-    return (
-        <header>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Página Inicial</Link>
-                    </li>
-                    <li>
-                        <Link to="/sobre">Sobre</Link>
-                    </li>
-                    <li>
-                        <Link to="/contato">Contato</Link>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    );
+export const Header: React.FC = () => {
+  return (
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <Link href="/">Página Inicial</Link>
+          </li>
+          <li>
+            <Link href="/sobre">Sobre</Link>
+          </li>
+          <li>
+            <Link href="/contato">Contato</Link>
+          </li>
+          <li>
+            <Link href="/forms/classForm">Formulário de Classe</Link>
+          </li>
+          <li>
+            <Link href="/forms/schoolRegistrationForm">Formulário de Registro Escolar</Link>
+          </li>
+          <li>
+            <Link href="/forms/homeSchoolForm">Formulário de Registro de Escola Origem</Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
 };
-
-export default Header;
